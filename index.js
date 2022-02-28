@@ -12,17 +12,17 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.use(express.static('public'))
 
 
-app.use('/', (req, res)=>{
-    res.render('home')
-})
-app.use('/generic', (req, res)=>{
-    res.render('generic')
-})
-app.use('/elements', (req, res)=>{
-    res.render('elements')
-})
+// app.use('/', (req, res)=>{
+//     res.render('home')
+// })
+// app.use('/generic', (req, res)=>{
+//     res.render('generic')
+// })
+// app.use('/elements', (req, res)=>{
+//     res.render('elements')
+// })
 app.use('*', (req, res)=>{
-    res.render('404')
+    res.render(__dirname + '/public/index.html')
 })
 
 
